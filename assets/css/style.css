@@ -1,0 +1,243 @@
+body {
+  background-color: #415896;
+}
+/* Header */
+header {
+  background-color: #3e3e80;
+}
+.navbar-brand img {
+  height: 50px;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-nav {
+  gap: 20px;
+}
+.nav-item a {
+  color: #fff;
+  transition: all 0.5s ease;
+  font-size: 1.2rem;
+}
+.nav-item a:hover {
+  color: #1b1939;
+}
+
+/* Sessão introdução */
+.introduction {
+  background-color: #1b1939;
+  color: #fff;
+}
+.introduction-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.introduction-title {
+  font-size: 2rem;
+}
+.introduction-subtitle {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+.introduction-content a {
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+.introduction-content a:hover {
+  background-color: #3e3e80;
+  border: 0;
+}
+.introduction-image {
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .introduction-image {
+    display: flex;
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .introduction-title {
+    font-size: 3.5rem;
+  }
+  .introduction-subtitle {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+  }
+  .introduction-content {
+    padding: 50px;
+  }
+}
+/* Sessão dica 1 */
+.firstTip {
+  background-color: #3e3e80;
+  color: #fff;
+  padding: 30px;
+}
+.firstTip-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.firstTip-content div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #1b1939;
+  margin-top: 10px;
+}
+.firstTip-content h2 {
+  margin: 10px 0px;
+}
+.firstTip-content p {
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .firstTip {
+    padding: 50px;
+  }
+  .firstTip h1 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Sessão dica 2 */
+.secondTip {
+  background-color: #1b1939;
+  color: #fff;
+}
+.secondTip-image {
+  padding: 30px;
+}
+.secondTip-content {
+  padding: 0px 30px 30px;
+}
+.secondTip-description {
+  margin: 10px 0 20px;
+}
+.secondTip-content a:hover {
+  background-color: #3e3e80;
+  border: 0;
+}
+@media (min-width: 768px) {
+  .secondTip-content {
+    padding: 50px;
+  }
+  .secondTip-image {
+    padding: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .secondTip-description {
+    margin: 20px 0px 30px;
+    font-size: 1.5rem;
+    max-width: 400px;
+  }
+}
+
+/* Sessão Cadastro */
+.form {
+  background-color: lightgrey;
+  color: #000;
+  padding: 30px;
+}
+.form h1 {
+  margin-bottom: 20px;
+}
+.form button:hover {
+  background-color: #1b1939;
+  border: 0;
+}
+@media (min-width: 1024px) {
+  .form {
+    padding: 50px;
+  }
+  .form h1 {
+    margin-bottom: 30px;
+  }
+}
+
+/* Sessão Lista de Alunos */
+.studentsList {
+  background-color: #3e3e80;
+  color: #fff;
+  padding: 10px;
+}
+.studentsList h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.table {
+  border-collapse: collapse;
+}
+.table-body img {
+  cursor: pointer;
+}
+#delete {
+  width: 30px;
+}
+#delete div {
+  background-color: gray;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+#delete div:hover {
+  background-color: #415896;
+}
+#delete img {
+  width: 15px;
+}
+.table-body tr td:last-child {
+  text-align: center;
+}
+.table thead {
+  background-color: #bbb;
+  text-align: center;
+}
+.table tbody {
+  background-color: #fff;
+}
+.table th,
+.table td {
+  border: 1px solid gray;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .studentsList {
+    padding: 30px;
+  }
+  .studentsList h1 {
+    margin-bottom: 30px;
+  }
+  #delete {
+    max-width: 60px;
+  }
+  #delete div {
+    width: 30px;
+    height: 30px;
+  }
+  #delete img {
+    width: 18px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #1b1939;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer p {
+    font-size: 1.3rem;
+  }
+}

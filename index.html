@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"
+    defer></script>
+  <!-- Javascript do projeto -->
+  <script src="assets/js/script.js" defer></script>
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Desafio - Smartch</title>
+</head>
+
+<body>
+
+  <header class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#firstTip">Dica 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#secondTip">Dica 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#form">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#table">Lista de Alunos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="container introduction">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="introduction-content">
+            <h1 class="introduction-title">Este é um teste de programação Frontend</h1>
+            <h4 class="introduction-subtitle">Vamos fazer um cadastro de alunos básicos e uma listagem.</h4>
+            <a href="#form" class="btn btn-primary">CADASTRO ALUNO</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 introduction-image">
+          <img class="img-fluid" src="assets/images/image-bg.svg" alt="Imagem de ilustração">
+        </div>
+      </div>
+    </section>
+    <section class="container firstTip" id="firstTip">
+      <h1 class="text-center">Dica 1</h1>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="firstTip-content">
+            <div><img src="assets/images/pensando.png" class="img-fluid" alt="Imagem rosto pensativo"></div>
+            <h2>Campo Nome</h2>
+            <p class="text-center">Quandor for preencher, digite o nome completo do aluno.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="firstTip-content">
+            <div><img src="assets/images/pensando.png" class="img-fluid" alt="Imagem rosto pensativo"></div>
+            <h2>Campo Email</h2>
+            <p class="text-center">Utilize sempre um e-mail válido, para facilitar a comunicação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container secondTip" id="secondTip">
+      <div class="row">
+        <div class="col-12 col-md-6 ">
+          <div class="secondTip-image"><img class="img-fluid" src="assets/images/undraw_teaching.svg"
+              alt="Imagem ilustrativa"></div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="secondTip-content">
+            <h1 class="secondTip-title">Dica 2</h1>
+            <p class="secondTip-description">
+              Lembre-se que o preenchimento de todos os campos do formulário de cadastro é obrigatório.
+            </p>
+            <a href="#form" class="btn btn-primary">CADASTRO ALUNO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container form" id="form">
+      <h1 class="text-center">Cadastro Aluno</h1>
+      <form class="row g-5" id="form-registration" method="get">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="name" placeholder="Digite o nome do aluno">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" id="email" placeholder="email@teste.com">
+        </div>
+        <div class="col-md-6">
+          <label for="cpf" class="form-label">CPF</label>
+          <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" onkeyup="maskCPF()"
+            maxlength="14" autocomplete="off">
+        </div>
+        <div class="col-md-6">
+          <label for="course" class="form-label">Curso</label>
+          <input type="text" class="form-control" id="course" placeholder="Curso do aluno">
+        </div>
+        <div class="col-12 alert alert-danger d-none">
+          Preencha o campo <span id="message-error"></span>
+        </div>
+        <div id="success" class="alert alert-success col-12 d-none" role="alert">
+          Aluno cadastrado com sucesso!
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </section>
+    <section class="container studentsList " id="table">
+      <h1>Lista de Alunos</h1>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">NOME</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">CPF</th>
+              <th scope="col" colspan="2">CURSO</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr>
+              <td>Juliano Silva</td>
+              <td>juliano@site.com</td>
+              <td class="cpf-number">049.223.590-28</td>
+              <td>Lógica de Programação</td>
+              <td id="delete" onclick="removeStudent(this)">
+                <div><img src="assets/images/icon-delete.svg" alt="Icon delete"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>Pedro Costa</td>
+              <td>pedro@test.com</td>
+              <td class="cpf-number">655.988.130-09</td>
+              <td>JavaScript</td>
+              <td id="delete" onclick="removeStudent(this)">
+                <div><img src="assets/images/icon-delete.svg" alt="Icon delete"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>Rodolfo Guimarães</td>
+              <td>rodolfo@site.com</td>
+              <td class="cpf-number">861.726.950-29</td>
+              <td>HTML e CSS</td>
+              <td id="delete" onclick="removeStudent(this)">
+                <div><img src="assets/images/icon-delete.svg" alt="Icon delete"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="success-register" class="alert alert-success col-12 d-none" role="alert">
+        Aluno removido com sucesso!
+      </div>
+    </section>
+  </main>
+  <footer class="container footer">
+    <p>Powered by MAch1 - Pilotando para o futuro!</p>
+  </footer>
+
+</body>
+
+</html>
