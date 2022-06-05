@@ -102,17 +102,17 @@ function validateEmail() {
 }
 
 function validateCPF() {
-  let cpfOlnyNumbers = cpf.value.replace(/\D/g, '');
+  let cpfOnlyNumbers = cpf.value.replace(/\D/g, '');
 
-  if (cpfOlnyNumbers.length !== 11) {
+  if (cpfOnlyNumbers.length !== 11) {
     erro.classList.remove('d-none');
     messageError.innerHTML = 'com o número do cpf';
     cpf.focus();
     cpf.classList.add('is-invalid');
     return false;
   } else {
-    let numeros = cpfOlnyNumbers.substring(0, 9);
-    let digitos = cpfOlnyNumbers.substring(9);
+    let numeros = cpfOnlyNumbers.substring(0, 9);
+    let digitos = cpfOnlyNumbers.substring(9);
     let soma = 0;
     for (let i = 10; i > 1; i--) {
       soma += numeros.charAt(10 - i) * i;
@@ -127,7 +127,7 @@ function validateCPF() {
     }
 
     soma = 0;
-    numeros = cpfOlnyNumbers.substring(0, 10);
+    numeros = cpfOnlyNumbers.substring(0, 10);
     for (let k = 11; k > 1; k--) {
       soma += numeros.charAt(11 - k) * k;
     }
@@ -139,7 +139,7 @@ function validateCPF() {
       messageError.innerHTML = 'com um número de cpf válido';
       return false;
     }
-    if (cpfOlnyNumbers.toString().match(/^(\d)\1*$/)) {
+    if (cpfOnlyNumbers.toString().match(/^(\d)\1*$/)) {
       erro.classList.remove('d-none');
       messageError.innerHTML = 'com um número de cpf válido';
       return false;
